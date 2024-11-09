@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> SERVER SLOT </title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Bio Container */
+        .bio-container {
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            text-align: center;
+            padding: 30px;
+        }
+
+        /* Bio Content */
+        h1 {
+            font-size: 2em;
+            color: #333;
+        }
+
+        p {
+            color: #777;
+            margin-bottom: 20px;
+        }
+
+        /* Select Dropdown */
+        select {
+            padding: 12px;
+            font-size: 1.2em;
+            width: 100%;
+            margin-top: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            color: #333;
+            transition: background-color 0.3s ease;
+        }
+
+        select:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* Button Styling */
+        .bio-button {
+            padding: 12px 24px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            margin-top: 20px;
+            display: inline-block;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .bio-button:hover {
+            background-color: #2980b9;
+            transform: translateY(-5px);
+        }
+
+        .bio-button:active {
+            transform: translateY(2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="bio-container">
+        <!-- Bio Section -->
+        <h1> PILIH SERVER </h1>
+        
+
+        <!-- Select Dropdown -->
+        <label for="bio-options"></label>
+        <select id="bio-options">
+            <option value=""> ==> KLIK DISINI <== </option>
+            <option value="https://beku4dwd.com/register?referral_code=vvip"> 1. SERVER WLA </option>
+            <option value="https://daftar-new-cuan-beku4d.store/register?referral_code=vvip"> 2. SERVER EROPA </option>
+            <option value="https://beku4dwd.com/register?referral_code=vvip"> 3. SERVER ASIA </option>
+        </select>
+
+        <!-- Button to navigate to selected link -->
+        <a href="#" id="link-button" class="bio-button" target="_blank"> SUBMIT SERVER</a>
+    </div>
+
+    <script>
+        // Script to update button link based on dropdown selection
+        document.getElementById("bio-options").addEventListener("change", function() {
+            var selectedValue = this.value;
+            var button = document.getElementById("link-button");
+
+            // If a link is selected, update the button's href attribute
+            if (selectedValue) {
+                button.href = selectedValue;
+                button.style.display = "inline-block";  // Show the button
+            } else {
+                button.style.display = "none";  // Hide the button if no selection
+            }
+        });
+    </script>
+</body>
+</html>
